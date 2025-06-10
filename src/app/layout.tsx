@@ -9,12 +9,9 @@ export const viewport = {
 export const metadata = {
   title: 'Hosting',
   icons: {
-    icon: [
-      { url: '/favicon.ico', type: 'image/x-icon' }
-    ],
+    icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
   },
 };
-
 
 export default function RootLayout({
   children,
@@ -23,11 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body suppressHydrationWarning>
-      {children}
-        <script id="dhws-errorTracker" src="/dhws-error-tracker.js"></script>
-  <script id="dhws-elementInspector" src="/dhws-web-inspector.js"></script>
-</body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
